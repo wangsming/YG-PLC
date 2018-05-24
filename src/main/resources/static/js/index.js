@@ -4,9 +4,10 @@ $(function () {
 });
 
 var search = {
-    url: "plc/getList",
+    url: "getList",
     initTable:function(){
-        console.log("getList");
+        console.log(111);
+        console.log(search.url);
         $("#main_table").DataTable({
             language: lang, //提示信息
             autoWidth: false, //禁用自动调整列宽

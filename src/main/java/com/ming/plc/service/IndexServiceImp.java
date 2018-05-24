@@ -16,11 +16,12 @@ public class IndexServiceImp {
     PlasticpipeI  plasticpipeI;
 
     public Json findListMainData(ParamsUtils params) {
-        Json json = new Json();
+        Json json = new Json(true, "");
         List<PlasticPipe> findListMainData = plasticpipeI.findAll();
 
-        json.setMsg("");
-//        json.setObj();
+
+
+        json.setObj(findListMainData);
         return json;
     }
 }

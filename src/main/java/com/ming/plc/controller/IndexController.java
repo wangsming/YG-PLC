@@ -30,12 +30,10 @@ public class IndexController {
 
 
     @ResponseBody
-    @RequestMapping(value = "getList", method = RequestMethod.POST)
-    public Json searchData(HttpServletRequest request, ParamsUtils params){
+    @RequestMapping(value = "/getList", method = RequestMethod.POST)
+    public Json searchData(ParamsUtils params){
 
-        Json json = new Json(true, "");
-
-        json = indexServiceImp.findListMainData(params);
+        Json json = indexServiceImp.findListMainData(params);
 
         return json;
     }
